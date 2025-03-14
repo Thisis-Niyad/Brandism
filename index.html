@@ -26,13 +26,13 @@
 
 <body>
     <div class="vh100">
-        <header>
+        <header id="top">
             <img src="IMG/BrandismLogo1.png" alt="Brandism" class="logo">
             <ul class="nav_links">
-                <li><a href="/PAGES/About.html">ABOUT</a></li>
+                <li><a href="PAGES/About.html">ABOUT</a></li>
                 <li><a href="#BLOG">BLOG</a></li>
                 <li><a href="#SERVICES">SERVICES</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
             <div class="menuBar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list"
@@ -42,7 +42,7 @@
                 </svg>
             </div>
             <ul class="UInav_links">
-                <li class="brd-b"><button class="bck-bnt">
+                <li class="brd-b p-10"><button class="bck-bnt">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                             class="bi bi-caret-right-square" viewBox="0 0 16 16">
                             <path
@@ -52,16 +52,16 @@
                         </svg></button></li>
                 <li class="brd-b"><a href="PAGES/About.html">ABOUT</a></li>
                 <li class="brd-b"><a href="#BLOG">BLOG</a></li>
-                <li class="brd-b" id="services_list">SERVICES
+                <li class="brd-b p-10" id="services_list">SERVICES
                     <ul class="Ui_services">
-                        <li><a href="">Advertising Video Production</a></li>
-                        <li><a href="">Social Media Management</a></li>
-                        <li><a href="">Branding</a></li>
-                        <li><a href="">Logo Design</a></li>
-                        <li><a href="">Web Design</a></li>
+                        <li><a class="bck-bnt" href="#advertising">Advertising Video Production</a></li>
+                        <li><a class="bck-bnt" href="#social">Social Media Management</a></li>
+                        <li><a class="bck-bnt" href="#branding">Branding</a></li>
+                        <li><a class="bck-bnt" href="#logo">Logo Design</a></li>
+                        <li><a class="bck-bnt" href="#webdesign">Web Design</a></li>
                     </ul>
                 </li>
-                <li class="brd-b"><a href="">CONTACT</a></li>
+                <li class="brd-b"><a href="#contact">CONTACT</a></li>
             </ul>
         </header>
         <div class="row1 pt-40">
@@ -96,7 +96,7 @@
             </div>
             <div class="col-5 dcenter">
                 <div class="r3d">
-                    <span>Brandism</span>
+                    <!-- <span>Brandism</span> -->
                     <img src="IMG/BrandismLogo1.png" alt="">
                 </div>
             </div>
@@ -267,7 +267,7 @@
     <section class="services pb-45">
         <div class="txt-center text1" id="SERVICES"> OUR SERVICES </div>
         <div class="row2 just-c">
-            <div class="card">
+            <div class="card" id="advertising">
                 <div class="cardlogo txt-blck">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                         class="bi bi-camera-reels-fill" viewBox="0 0 16 16">
@@ -280,14 +280,14 @@
                 <div class="title-s"> Advertising Video Production </div>
                 <p class="f-bold">Captivating videos that bring your brand’s story to life.</p>
             </div>
-            <div class="card">
+            <div class="card" id="social">
                 <div class="cardlogo txt-blck">
                     <img src="IMG/social-circle-icon.png" width="70" alt="">
                 </div>
                 <div class="title-s"> Social Media Management </div>
                 <p class="f-bold">Grow your online presence with expert strategy and content.</p>
             </div>
-            <div class="card">
+            <div class="card" id="branding">
                 <div class="cardlogo txt-blck">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -300,7 +300,7 @@
             </div>
         </div>
         <div class="row2 just-c">
-            <div class="card">
+            <div class="card" id="logo">
                 <div class="cardlogo txt-blck">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-palette-fill" viewBox="0 0 16 16">
@@ -316,7 +316,7 @@
                 <div class="title-s"> Logo Design </div>
                 <p class="f-bold">Unique and professional logos that define your business.</p>
             </div>
-            <div class="card">
+            <div class="card" id="Webdesign">
                 <div class="cardlogo txt-blck">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-laptop" viewBox="0 0 16 16">
@@ -352,7 +352,7 @@
             <img src="IMG/images.jpeg" alt="loading error"><img src="IMG/EVENT2.jpeg" alt="loading error">
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="f-title "> CONTACT US </div>
         <div class="row3">
             <div class="col-4 txt-center">
@@ -401,6 +401,13 @@
             </div>
         </div>
     </footer>
+    <a href="#top" class="to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+        </svg>
+    </a>
     <script src="JS/Brandism.js"></script>
 </body>
 

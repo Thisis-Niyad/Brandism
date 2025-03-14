@@ -1,14 +1,3 @@
-let active = 0;
-function goRight() {
-    active++;
-    let slider = document.querySelector(".slider");
-    slider.style.transform = `translateX(${-100 * active}vw)`;
-}
-function goLeft() {
-    active--;
-    let slider = document.querySelector(".slider");
-    slider.style.transform = `translateX(${-100 * active}vw)`;
-}
 let bar = document.querySelector('.menuBar');
 bar.addEventListener('click', () => {
     let link = document.querySelector('.UInav_links');
@@ -37,12 +26,3 @@ bck_btn.forEach(element => {
         bar.classList.add("dflex");
     })
 });
-
-const totop = document.querySelector(".to-top");
-window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 100) {
-        totop.classList.add("active");
-    } else {
-        totop.classList.remove("active");
-    }
-})
