@@ -1,0 +1,112 @@
+.card
+    background-color: #fff
+    width: 250px
+    height: 310px
+    border-radius: 15px
+    margin: 10px
+    color: #000
+    transition: 0.3s
+    >*
+        padding: 10px
+    &:hover
+        scale: 1.05
+        .cardlogo
+            width: 100%
+            border-radius: 15px 15px 50% 0
+            margin: 0
+.cardlogo
+    width: 80px
+    height: 80px
+    background-color: #a19f9f
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 10px
+    transition: 0.3s
+.row2
+    display: flex
+    flex-wrap: wrap
+.title-s
+    font-weight: bold
+    font-size: larger
+    padding: 25px 10px 0px
+.just-c
+    justify-content: center
+.pb-45
+    padding-bottom: 45px
+.f-bold
+    font-weight: bold
+
+//  -------------------- blog section ---------------
+.Blogs
+    background-color: #fff
+    padding: 5% 5%
+.imgRow
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    img
+        padding: 10px
+        width: 40%
+        animation: appear linear
+        animation-timeline: view()
+        animation-range: entry 0%
+@keyframes appear
+    0%
+        opacity: 0
+        scale: 0.8
+    100%
+        opacity: 1
+        scale: 1
+
+// --------------------- footer section -----------------
+.footer
+    background-color: rgb(23,23 ,23 )
+    padding: 5% 1%
+.f-title
+    font-size: 3rem
+    font-weight: bold
+    text-align: center
+.contact2
+    display: flex
+    justify-content: space-evenly
+    a
+        transition: 0.2s
+        &:hover
+            color: #7fffd4
+            scale: 1.2
+.line-h
+    line-height: 1.5
+.row3
+    display: flex
+    align-items: center
+    &::after
+        display: block
+        clear: both
+        content: ""
+@media ( max-width:900px  )
+    .Blogs
+        padding: 5% 0
+@media ( max-width:790px)
+    .imgRow
+        img
+            width: 51%
+@media ( max-width:650px)
+    .imgRow
+        img
+            width: 75%
+    .row3
+        flex-direction: column
+        div
+            margin: 10px
+        .col-4
+            width: 100%
+@media ( max-width:500px)
+    .imgRow
+        img
+            width: 100%
+            padding: 15px
+    .f-title
+        font-size: 2rem
