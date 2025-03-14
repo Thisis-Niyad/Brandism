@@ -172,17 +172,8 @@ header {
   font-weight: 900;
   align-items: center;
   padding: 20px;
-  animation: rotation 7s infinite linear;
 }
 
-@keyframes rotation {
-  0% {
-    transform: perspective(500px) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(500px) rotateY(360deg);
-  }
-}
 .txt-center {
   text-align: center;
 }
@@ -225,11 +216,11 @@ header {
   box-shadow: -1px 0px 7px black;
   padding: 0;
   top: 0;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .UInav_links li.brd-b {
   cursor: pointer;
   width: 100%;
-  padding: 10px;
   border-bottom: 1px solid;
   -o-border-image: linear-gradient(88deg, rgb(0, 49, 145) 0%, rgb(255, 255, 255) 50%, rgb(0, 49, 145) 100%);
      border-image: linear-gradient(88deg, rgb(0, 49, 145) 0%, rgb(255, 255, 255) 50%, rgb(0, 49, 145) 100%);
@@ -238,16 +229,25 @@ header {
 .UInav_links li.brd-b:hover {
   background-color: #000090;
 }
+.UInav_links li.brd-b a {
+  width: 100%;
+  display: block;
+  padding: 10px;
+}
+
+.p-10 {
+  padding: 10px;
+}
 
 .Ui_services {
   list-style: none;
   padding: 10px 0 0 0;
+  animation: scale-in-ver-top 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .Ui_services li {
   border-top: 1px solid #fff;
   cursor: pointer;
   width: 100%;
-  padding: 10px;
 }
 .Ui_services li:hover {
   background-color: rgb(2, 2, 128);
@@ -259,18 +259,56 @@ header {
 
 .dflex {
   display: flex;
-  animation: scale-in-hor-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@keyframes scale-in-hor-right {
+.to-top {
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  opacity: 0;
+  pointer-events: none;
+  background-color: dimgrey;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+@keyframes slide-in-right {
   0% {
-    transform: scaleX(0);
-    transform-origin: 100% 100%;
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-top {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
     opacity: 1;
   }
   100% {
-    transform: scaleX(1);
-    transform-origin: 100% 100%;
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
     opacity: 1;
   }
 }
@@ -328,7 +366,7 @@ header {
     width: 100%;
   }
   .text1 {
-    padding: 0;
+    padding: 30px 0 0 0;
   }
   .r3d {
     font-size: xx-large;
@@ -364,8 +402,8 @@ header {
 
 .card {
   background-color: #fff;
-  width: 250px;
-  height: 310px;
+  width: 275px;
+  height: 330px;
   border-radius: 15px;
   margin: 10px;
   color: #000;
