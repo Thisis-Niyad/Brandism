@@ -485,6 +485,9 @@ button {
   }
 }
 @media (max-width: 550px) {
+  .intro {
+    padding: 100px 30px;
+  }
   .txt-yb, .txt-rb {
     font-size: 2.5rem;
   }
@@ -525,6 +528,7 @@ button {
   }
   .intro {
     font-size: 1rem;
+    padding: 100px 20px;
   }
 }
 .section2 {
@@ -627,6 +631,9 @@ button {
   }
   .slider-txt2 {
     font-size: 1.5rem;
+  }
+  br.br-none {
+    display: none;
   }
 }
 @media (max-width: 750px) {
