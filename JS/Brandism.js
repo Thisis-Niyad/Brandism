@@ -1,3 +1,9 @@
+// window.onload = function () {
+//     setTimeout(remover, 3000);
+// }
+// function remover() {
+//     document.querySelector('.removetxt').classList.add('dnone');
+// }
 let active = 0;
 function goRight() {
     active++;

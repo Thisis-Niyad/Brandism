@@ -99,6 +99,9 @@
   .slider-txt2 {
     font-size: 1.5rem;
   }
+  br.br-none {
+    display: none;
+  }
 }
 @media (max-width: 750px) {
   .slider-txt1 {

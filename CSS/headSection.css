@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(0, 16, 138);
+  background-color: rgb(5, 5, 5);
   margin: 0;
   padding: 0;
   color: #fff;
@@ -48,16 +48,108 @@ header {
     opacity: 1;
   }
 }
-.row1 {
-  display: flex;
-  align-items: center;
-}
-.row1::after {
-  display: block;
-  clear: both;
-  content: "";
+.txt-yb {
+  font-size: 4rem;
+  font-weight: bold;
+  color: gold;
 }
 
+.slide-r {
+  animation: scale-in-hor-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 3s;
+}
+
+@keyframes scale-in-hor-left {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+.txt-y {
+  font-size: 3rem;
+  color: gold;
+}
+
+.txt-r {
+  font-size: 3rem;
+  color: red;
+}
+
+.txt-rb {
+  font-size: 4rem;
+  color: red;
+  font-weight: bold;
+}
+
+.intro {
+  font-size: 2rem;
+  padding: 100px 40px;
+}
+
+.df-c {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+.df-e {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.removetxt {
+  animation: scale-out-ver-bottom 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation-delay: 3s;
+}
+
+@keyframes scale-out-ver-bottom {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
+    opacity: 1;
+    font-size: 1rem;
+  }
+}
+.svtop1 {
+  margin: 0;
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 4s;
+}
+
+.svtop2 {
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 5s;
+}
+
+.svtop3 {
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 6s;
+}
+
+@keyframes scale-in-ver-top {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
 .row {
   display: flex;
   align-items: center;
@@ -131,6 +223,18 @@ header {
 .vh100 {
   height: 100vh;
 }
+.vh100::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #454646;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(100% 20%, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 20%, 0% 100%, 100% 100%);
+}
 
 .text1 {
   font-size: 3rem;
@@ -193,7 +297,7 @@ header {
   }
 }
 .menuBar {
-  background-color: #01016e;
+  background-color: #454646;
   width: 45px;
   height: 45px;
   border-radius: 4px;
@@ -209,7 +313,7 @@ header {
   position: fixed;
   right: 0;
   width: 50%;
-  background-color: #00007A;
+  background-color: #0e0e0e;
   height: 100%;
   margin: 0;
   z-index: 1;
@@ -222,12 +326,12 @@ header {
   cursor: pointer;
   width: 100%;
   border-bottom: 1px solid;
-  -o-border-image: linear-gradient(88deg, rgb(0, 49, 145) 0%, rgb(255, 255, 255) 50%, rgb(0, 49, 145) 100%);
-     border-image: linear-gradient(88deg, rgb(0, 49, 145) 0%, rgb(255, 255, 255) 50%, rgb(0, 49, 145) 100%);
+  -o-border-image: linear-gradient(88deg, rgb(14, 14, 14) 0%, rgb(255, 255, 255) 50%, rgb(14, 14, 14) 100%);
+     border-image: linear-gradient(88deg, rgb(14, 14, 14) 0%, rgb(255, 255, 255) 50%, rgb(14, 14, 14) 100%);
   border-image-slice: 1;
 }
 .UInav_links li.brd-b:hover {
-  background-color: #000090;
+  background-color: #282828;
 }
 .UInav_links li.brd-b a {
   width: 100%;
@@ -250,7 +354,7 @@ header {
   width: 100%;
 }
 .Ui_services li:hover {
-  background-color: rgb(2, 2, 128);
+  background-color: rgb(29, 29, 29);
 }
 
 .UInav_links, .Ui_services, .menuBar {
@@ -320,10 +424,25 @@ button {
   .contact1 {
     width: 75%;
   }
+  .txt-yb, .txt-rb {
+    font-size: 3.7rem;
+  }
+  .txt-y, .txt-r {
+    font-size: 2.7rem;
+  }
 }
 @media (max-width: 800px) {
   .text1 {
     font-size: 2.5rem;
+  }
+  .txt-yb, .txt-rb {
+    font-size: 3.5rem;
+  }
+  .txt-y, .txt-r {
+    font-size: 2.5rem;
+  }
+  .intro {
+    font-size: 1.7rem;
   }
 }
 @media (min-width: 700px) {
@@ -332,6 +451,15 @@ button {
   }
 }
 @media (max-width: 700px) {
+  .txt-yb, .txt-rb {
+    font-size: 3rem;
+  }
+  .txt-y, .txt-r {
+    font-size: 2rem;
+  }
+  .intro {
+    font-size: 1.5rem;
+  }
   .pt-40 {
     padding-top: 20px;
   }
@@ -357,6 +485,15 @@ button {
   }
 }
 @media (max-width: 550px) {
+  .txt-yb, .txt-rb {
+    font-size: 2.5rem;
+  }
+  .txt-y, .txt-r {
+    font-size: 2rem;
+  }
+  .intro {
+    font-size: 1.3rem;
+  }
   .row1 {
     display: flex;
     align-items: center;
@@ -379,5 +516,14 @@ button {
 @media (max-width: 450px) {
   .UInav_links {
     width: 100%;
+  }
+  .txt-yb, .txt-rb {
+    font-size: 2rem;
+  }
+  .txt-y, .txt-r {
+    font-size: 1.5rem;
+  }
+  .intro {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=headSection.css.map */

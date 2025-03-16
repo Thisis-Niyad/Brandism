@@ -1,7 +1,7 @@
 *
     box-sizing: border-box
 body
-    background-color: rgb(0,16 ,138 )
+    background-color: rgb(5,5 ,5 )
     margin: 0
     padding: 0
     color: #fff
@@ -36,14 +36,94 @@ header
         -webkit-transform: translateZ(0) translateX(0)
         transform: translateZ(0) translateX(0)
         opacity: 1
-.row1
+.txt-yb
+    font-size: 4rem
+    font-weight: bold
+    color: gold
+.slide-r
+    animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation-delay: 3s
+@keyframes scale-in-hor-left
+    0%
+        -webkit-transform: scaleX(0)
+        transform: scaleX(0)
+        -webkit-transform-origin: 0% 0%
+        transform-origin: 0% 0%
+        opacity: 1
+
+    100%
+        -webkit-transform: scaleX(1)
+        transform: scaleX(1)
+        -webkit-transform-origin: 0% 0%
+        transform-origin: 0% 0%
+        opacity: 1
+
+.txt-y
+    font-size: 3rem
+    color: gold
+.txt-r
+    font-size: 3rem
+    color: red
+.txt-rb
+    font-size: 4rem
+    color: red
+    font-weight: bold
+.intro
+    font-size: 2rem
+    // line-height: 0.3
+    padding: 100px 40px
+.df-c
     display: flex
     align-items: center
-    &::after
-        display: block
-        clear: both
-        content: ""
-.col-r7
+    height: 4rem
+.df-e
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+.removetxt
+
+    animation: scale-out-ver-bottom 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    animation-delay: 3s
+@keyframes scale-out-ver-bottom
+    0%
+        -webkit-transform: scaleY(1)
+        transform: scaleY(1)
+        -webkit-transform-origin: 0% 100%
+        transform-origin: 0% 100%
+        opacity: 1
+
+    100%
+        -webkit-transform: scaleY(0)
+        transform: scaleY(0)
+        -webkit-transform-origin: 0% 100%
+        transform-origin: 0% 100%
+        opacity: 1
+        font-size: 1rem
+.svtop1
+    margin: 0
+    animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation-delay: 4s
+.svtop2
+    animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation-delay: 5s
+.svtop3
+    animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation-delay: 6s
+@keyframes scale-in-ver-top
+    0%
+        -webkit-transform: scaleY(0)
+        transform: scaleY(0)
+        -webkit-transform-origin: 100% 0%
+        transform-origin: 100% 0%
+        opacity: 1
+
+    100%
+        -webkit-transform: scaleY(1)
+        transform: scaleY(1)
+        -webkit-transform-origin: 100% 0%
+        transform-origin: 100% 0%
+        opacity: 1
+
 .row
     display: flex
     align-items: center
@@ -83,6 +163,16 @@ header
     width: 125px
 .vh100
     height: 100vh
+    &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: #454646
+        top: 0
+        right: 0
+        z-index: -1
+        clip-path: polygon(100% 20%, 0% 100%, 100% 100%)
 .text1
     font-size: 3rem
     font-weight: bold
@@ -128,7 +218,7 @@ header
         transform: translateZ(0) translateX(0)
         opacity: 1
 .menuBar
-    background-color: #01016e
+    background-color: #454646
     width: 45px
     height: 45px
     border-radius: 4px
@@ -141,7 +231,7 @@ header
     position: fixed
     right: 0
     width: 50%
-    background-color: #00007A
+    background-color: #0e0e0e
     height: 100%
     margin: 0
     z-index: 1
@@ -153,10 +243,10 @@ header
         cursor: pointer
         width: 100%
         border-bottom: 1px solid
-        border-image: linear-gradient(88deg, rgba(0, 49, 145, 1) 0%, rgb(255 255 255) 50%, rgba(0, 49, 145, 1) 100%)
+        border-image: linear-gradient(88deg, rgba(14, 14, 14, 1) 0%, rgb(255 255 255) 50%, rgba(14, 14, 14, 1) 100%)
         border-image-slice: 1
         &:hover
-            background-color: #000090
+            background-color: #282828
         a
             width: 100%
             display: block
@@ -172,7 +262,7 @@ header
         cursor: pointer
         width: 100%
         &:hover
-            background-color: rgb(2, 2, 128)
+            background-color: rgb(29,29 ,29 )
 .UInav_links,.Ui_services,.menuBar
     display: none
 .dflex
@@ -230,13 +320,29 @@ button
 @media  ( max-width:1000px  )
     .contact1
         width: 75%
+    .txt-yb,.txt-rb
+        font-size: 3.7rem
+    .txt-y,.txt-r
+        font-size: 2.7rem
 @media  ( max-width:800px  )
     .text1
         font-size: 2.5rem
+    .txt-yb,.txt-rb
+        font-size: 3.5rem
+    .txt-y,.txt-r
+        font-size: 2.5rem
+    .intro
+        font-size: 1.7rem
 @media (min-width:700px)
     .menuBar
         display: none
 @media (max-width: 700px)
+    .txt-yb,.txt-rb
+        font-size: 3rem
+    .txt-y,.txt-r
+        font-size: 2rem
+    .intro
+        font-size: 1.5rem
     .pt-40
         padding-top: 20px
     .text1
@@ -254,6 +360,12 @@ button
         img,.menuBar
             margin: 15px
 @media ( max-width:550px  )
+    .txt-yb,.txt-rb
+        font-size: 2.5rem
+    .txt-y,.txt-r
+        font-size: 2rem
+    .intro
+        font-size: 1.3rem
     .row1
         display: flex
         align-items: center
@@ -270,3 +382,9 @@ button
 @media (max-width: 450px)
     .UInav_links
         width: 100%
+    .txt-yb,.txt-rb
+        font-size: 2rem
+    .txt-y,.txt-r
+        font-size: 1.5rem
+    .intro
+        font-size: 1rem
