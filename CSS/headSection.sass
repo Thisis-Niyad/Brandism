@@ -71,7 +71,7 @@ header
 .intro
     font-size: 2rem
     // line-height: 0.3
-    padding: 100px 40px
+    padding: 65px 40px
 .df-c
     display: flex
     align-items: center
@@ -81,7 +81,6 @@ header
     flex-direction: column
     align-items: flex-end
 .removetxt
-
     animation: scale-out-ver-bottom 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
     animation-delay: 3s
 @keyframes scale-out-ver-bottom
@@ -122,6 +121,19 @@ header
         transform: scaleY(1)
         -webkit-transform-origin: 100% 0%
         transform-origin: 100% 0%
+        opacity: 1
+.fade-in
+    animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+    animation-delay: 7s
+@keyframes fade-in-fwd
+    0%
+        -webkit-transform: translateZ(-80px)
+        transform: translateZ(-80px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateZ(0)
+        transform: translateZ(0)
         opacity: 1
 
 .row
@@ -317,6 +329,7 @@ button
 
 .dnone
     display: none
+
 @media  ( max-width:1000px  )
     .contact1
         width: 75%
@@ -361,7 +374,7 @@ button
             margin: 15px
 @media ( max-width:550px  )
     .intro
-        padding: 100px 30px
+        padding: 65px 30px
     .txt-yb,.txt-rb
         font-size: 2.5rem
     .txt-y,.txt-r
