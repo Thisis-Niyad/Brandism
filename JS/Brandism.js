@@ -53,6 +53,6 @@ document.querySelectorAll('.card').forEach(card => {
         card.classList.add('hover-effect');
     });
     card.addEventListener('touchend', () => {
-        setTimeout(() => card.classList.remove('hover-effect'), 500);
+        setTimeout(() => card.classList.remove('hover-effect'), 2000);
     });
 });
