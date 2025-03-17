@@ -1,9 +1,4 @@
-// window.onload = function () {
-//     setTimeout(remover, 3000);
-// }
-// function remover() {
-//     document.querySelector('.removetxt').classList.add('dnone');
-// }
+
 let active = 0;
 function goRight() {
     active++;
@@ -52,3 +47,12 @@ window.addEventListener("scroll", () => {
         totop.classList.remove("active");
     }
 })
+
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('touchstart', () => {
+        card.classList.add('hover-effect');
+    });
+    card.addEventListener('touchend', () => {
+        setTimeout(() => card.classList.remove('hover-effect'), 500);
+    });
+});
