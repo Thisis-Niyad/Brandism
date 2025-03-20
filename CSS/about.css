@@ -647,7 +647,7 @@ button {
   margin: 0;
   height: 25%;
 }
-.hover-effect .cardlogo p.f-bold {
+.hover-effect p.f-bold {
   display: block;
 }
 
@@ -717,7 +717,7 @@ button {
 }
 .footer {
   background-color: rgb(23, 23, 23);
-  padding: 5% 1%;
+  padding: 5% 1% 1px;
 }
 
 .f-title {
@@ -750,6 +750,11 @@ button {
   display: block;
   clear: both;
   content: "";
+}
+
+.copyright {
+  font-weight: 600;
+  color: darkgrey;
 }
 
 @media (max-width: 900px) {

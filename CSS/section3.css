@@ -120,7 +120,7 @@
 }
 .footer {
   background-color: rgb(23, 23, 23);
-  padding: 5% 1%;
+  padding: 5% 1% 1px;
 }
 
 .f-title {
@@ -153,6 +153,11 @@
   display: block;
   clear: both;
   content: "";
+}
+
+.copyright {
+  font-weight: 600;
+  color: darkgrey;
 }
 
 @media (max-width: 900px) {

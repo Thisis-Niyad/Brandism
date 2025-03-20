@@ -53,6 +53,9 @@ document.querySelectorAll('.card').forEach(card => {
         card.classList.add('hover-effect');
     });
     card.addEventListener('touchend', () => {
-        setTimeout(() => card.classList.remove('hover-effect'), 2000);
+        setTimeout(() => card.classList.remove('hover-effect'), 3000);
     });
 });
+
+
+document.getElementById("year").textContent = new Date().getFullYear();
